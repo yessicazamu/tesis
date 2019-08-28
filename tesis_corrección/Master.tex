@@ -1,0 +1,47 @@
+\documentclass[letterpaper,oneside,openright,12pt]{book}
+\usepackage[spanish]{babel} % Soporte a caracteres de español
+\usepackage[utf8]{inputenc} % Acentos directamente en texto
+\usepackage{setspace} % Interlineado
+\usepackage{verbatim} % Comentarios
+\usepackage{pdfpages} % Incluir Paginas de un PDF
+\usepackage[shortlabels]{enumitem}
+\usepackage{float}
+\usepackage{array}
+
+\title{Marco de trabajo para la evaluación de técnicas de visualización de información en los sistemas interactivos}
+\author{}
+\date{\today}
+
+\setcounter{secnumdepth}{4} % Para enumerar subsubsections
+\setcounter{tocdepth}{4} % Para que las subsubsections aparezcan en el indice
+
+\begin{document}
+%\includepdf{Portada/Portada}
+\maketitle %Portada provicional
+\graphicspath{{figures/}}
+
+
+\newpage
+$\ $ % Pagina en Blanco despues de portada
+\thispagestyle{empty} 
+
+\doublespacing % Espaciado Doble
+\tableofcontents % indice de contenidos
+\pagenumbering{Roman}
+
+\cleardoublepage
+%\addcontentsline{toc}{chapter}{Lista de figuras} % para que aparezca en el indice de contenidos
+%\listoffigures % indice de figuras
+
+\cleardoublepage
+%\addcontentsline{toc}{chapter}{Lista de tablas} % para que aparezca en el indice de contenidos
+%\listoftables % indice de tablas
+
+\include{Capitulo1/Capitulo_1}
+\include{Capitulo2/Capitulo_2}
+\include{Capitulo3/Capitulo_3}
+\bibliographystyle{apalike}
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibliography{bibliografia}
+
+\end{document}
